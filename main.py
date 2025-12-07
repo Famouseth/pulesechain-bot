@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.INFO)
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 w3 = Web3(Web3.HTTPProvider("https://rpc.scan.pulsechain.com"))
-w3.middleware_onion.inject(h_poa_middleware, layer=0)
+w3.middleware_onion.inject(geth_poa_middleware, layer=0)
 
 FACTORY = w3.to_checksum_address("0x1715a3E5a14588b3E3C6b5f7A366a4340338dF21")
 WPLS = w3.to_checksum_address("0xA1077a294dDE1B09bB078844df40758a5D0f9a27")
