@@ -8,7 +8,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 
 logging.basicConfig(level=logging.INFO)
 
-BOT_TOKEN = "8535074952:AAEGFrEqINAfDFqP2uDb80ZV5V6at2DYbTA"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 w3 = Web3(Web3.HTTPProvider("https://rpc.scan.pulsechain.com"))
 w3.middleware_onion.inject(h_poa_middleware, layer=0)
