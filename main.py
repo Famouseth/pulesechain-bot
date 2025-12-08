@@ -21,8 +21,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
-if not BOT_TOKEN:
-    raise ValueError("BOT_TOKEN missing!")
+
 
 # 3 BEST RPCs — automatic failover
 RPC_LIST = [
